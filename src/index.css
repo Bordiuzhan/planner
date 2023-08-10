@@ -1,9 +1,13 @@
 
 @import-normalize;
+@import '../node_modules/modern-normalize/modern-normalize.css';
+
+@import url('https://fonts.googleapis.com/css2?family=Alata&family=Poppins:wght@400;600&display=swap');
 
 body {
   font-family: "Alata","Poppins" sans-serif;
   line-height: 1.5;
+  margin: 0;
 }
 
 h1,
@@ -26,4 +30,126 @@ img {
   display: block;
   max-width: 100%;
   height: auto;
+}
+
+
+
+
+
+/* MyDatePicker.css */
+
+/* Стилі для власного інпуту */
+.custom-input {
+  position: relative;
+}
+.react-datepicker{
+  height: 300px;
+}
+.cancel-button {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background-color: #f44336;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.set-button {
+  position: absolute;
+  bottom: 0;
+  right:  0;
+  background-color: #7316c5;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.date-input {
+  padding-left: 40px;
+  width: 120px;
+  height: 30px;
+  font-size: 14px;
+}
+
+.react-datepicker__triangle{
+  display: none;
+}
+
+/* MyTimePicker.css */
+
+/* Стилі для власного інпуту */
+
+.time-picker[type="time"]::-webkit-inner-spin-button { 
+    -webkit-appearance: none;
+    cursor:pointer;
+    display: block;
+    width:20px;
+    color: red;
+    text-align:center;
+    position:relative;
+} 
+
+
+
+ .time-picker[type=time] {
+
+  border: none;
+  color: #2a2c2d;
+  font-size: 14px;
+  font-family: helvetica;
+  width: 180px;
+}
+
+/* Wrapper around the hour, minute, second, and am/pm fields as well as 
+the up and down buttons and the 'X' button */
+.time-picker[type=time]::-webkit-datetime-edit-fields-wrapper {
+  background-color: #f44336;
+  display: flex;
+}
+
+/* The space between the fields - between hour and minute, the minute and 
+second, second and am/pm */
+.time-picker[type=time]::-webkit-datetime-edit-text {
+  background-color: #1fc94a;
+
+  padding: 19px 4px;
+}
+
+/* The naming convention for the hour, minute, second, and am/pm field is
+`-webkit-datetime-edit-{field}-field` */
+
+/* Hour */
+.time-picker[type=time]::-webkit-datetime-edit-hour-field {
+  background-color: #daec13;
+  border-radius: 15%;
+  padding: 19px 13px;
+}
+
+/* Minute */
+.time-picker[type=time]::-webkit-datetime-edit-minute-field {
+  background-color: #5d5f92;
+  border-radius: 15%;
+  padding: 19px 13px;
+}
+
+/* AM/PM */
+.time-picker[type=time]::-webkit-datetime-edit-ampm-field {
+  background-color: #0a0619;
+  border-radius: 15%;
+  color: #fff;
+  padding: 19px 13px;
+}
+
+/* 'X' button for resetting/clearing time */
+.time-picker[type=time]::-webkit-clear-button {
+  display: none;
+}
+
+/* Up/Down arrows for incrementing/decrementing the value */
+.time-picker[type=time]::-webkit-inner-spin-button {
+  display: none;
 }

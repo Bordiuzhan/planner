@@ -1,3 +1,4 @@
+import "./sortButton.css"
 import  { useState } from "react";
 
 const SortButton = ({ options, onSortChange }) => {
@@ -13,12 +14,12 @@ const SortButton = ({ options, onSortChange }) => {
   };
 
   return (
-    <div>
-      <button onClick={toggleMenu}>Sort By</button>
+    <div className="wrapper-sort">
+      <button onClick={toggleMenu} className="btn-sort">Sort By</button>
       {isOpen && (
         <div className="sort-menu">
           {options.map((option) => (
-            <div
+            <div className="sort-option"
               key={option.key}
               onClick={() => handleSortChange(option.value)}
             >

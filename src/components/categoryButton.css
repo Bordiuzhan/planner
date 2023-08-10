@@ -1,0 +1,37 @@
+.wrapper-category {
+  /* border: 1px solid rgb(14, 15, 15); */
+  /* margin-right: 100px; */
+overflow: hidden;
+  position: absolute;
+  border-radius: 8px;
+  background: #fff;
+  box-shadow: 2px 4px 9px 0px rgba(166, 141, 174, 0.28);
+}
+.btn-category {
+  width: 148px;
+  min-height: 56px;
+  color: #3f3f3f;
+  font-family: Poppins;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  /* border: 1px solid red; */
+  border: none;
+  background: #fff;
+}
+.category-option {
+  border-top: 1px solid #aca7c3;
+  cursor: pointer;
+  color: #aca7c3;
+  font-family: Poppins;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1;
+  padding: 9px 24px;
+}
+.category-option:hover,
+:focus {
+  color: #7b61ff;
+}

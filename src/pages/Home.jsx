@@ -1,6 +1,10 @@
 import { useState } from 'react';
+import { NavLink } from 'react-router-dom';
+
 import SortButton from '../components/SortButton';
 import CategoryButton from '../components/CategoryButton';
+import EventList from '../components/EventList';
+import '../pages/home.css';
 
 const Home = () => {
   const [sortBy, setSortBy] = useState('');
@@ -10,14 +14,6 @@ const Home = () => {
     { name: 'Bob', age: 20 },
   ]);
 
-  const dataSortButton = [
-    { key: 1, value: 'by name', label: 'by name ↑' },
-    { key: 2, value: 'by name', label: 'by name ↓ ' },
-    { key: 3, value: 'by data', label: 'by data ↑' },
-    { key: 4, value: 'by data', label: 'by data ↓ ' },
-    { key: 5, value: 'by priority', label: 'by priority ↑' },
-    { key: 6, value: 'by priority', label: 'by priority ↓ ' },
-  ];
   const dataCategoryButton = [
     { key: 1, value: 'art', label: 'Art' },
     { key: 2, value: 'music', label: 'Music ' },
@@ -26,6 +22,14 @@ const Home = () => {
     { key: 5, value: 'workshop', label: 'Workshop' },
     { key: 6, value: 'party', label: 'Party' },
     { key: 7, value: 'sport', label: 'Sport' },
+  ];
+  const dataSortButton = [
+    { key: 1, value: 'by name', label: 'by name ↑' },
+    { key: 2, value: 'by name', label: 'by name ↓ ' },
+    { key: 3, value: 'by data', label: 'by data ↑' },
+    { key: 4, value: 'by data', label: 'by data ↓ ' },
+    { key: 5, value: 'by priority', label: 'by priority ↑' },
+    { key: 6, value: 'by priority', label: 'by priority ↓ ' },
   ];
   const dataEvents = [
     {
@@ -123,39 +127,49 @@ const Home = () => {
 
   return (
     <div>
-      <header>
-        <p>Event Planner</p>
-        <form>
-          <input type="text" placeholder="Search by keywords" />
-        </form>
-        <select>
-          <option value="ua">UK</option>
-          <option value="en">EN</option>
-        </select>
+      <header className="header">
+        <p className="header-logo">Event Planner</p>
+        <div className=" header-nav">
+          <form className="search-form">
+            <svg className="search-icon" width={'24px'} height={'24px'}>
+              <use href="../../public/images/swm-icons-outline-search.svg">
+                df
+              </use>
+            </svg>
+            <input
+              type="text"
+              placeholder="Search by keywords"
+              className="search"
+            />
+          </form>
+          <div className='wrapper-select'>
+            <select className="select">
+              <option value="ua" className="select-one">
+                UK
+              </option>
+              <option value="en" className="select-one">
+                EN
+              </option>
+            </select>
+          </div>
+        </div>
       </header>
-      <main>
-        <h1>My events</h1>
-        <div>
-          <SortButton
-            options={dataSortButton}
-            onSortChange={handleSortChange}
-          />
+      <main className='wrapper-main'>
+        <div className='main-nav'>
+        <h1 className='main-title'>My events</h1>
+        <div className='wrapper'>
           <CategoryButton
             options={dataCategoryButton}
             onCategoryChange={handleCategoryChange}
           />
+          <SortButton 
+            options={dataSortButton}
+            onSortChange={handleSortChange}
+          />
+          <NavLink to="/create" className="nav-link">+ Add new event</NavLink>
         </div>
-        <div>
-          <ul>
-            {dataEvents.map((dataEvent) => (
-              <li key={dataEvent.id}>
-                <img src={dataEvent.img} alt="" width="100px" height="100"/>
-                <h3>{dataEvent.title}</h3>
-                <p>{dataEvent.body}</p>
-              </li>
-            ))}
-          </ul>
         </div>
+        <EventList data={dataEvents} />
       </main>
     </div>
   );

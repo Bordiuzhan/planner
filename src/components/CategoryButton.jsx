@@ -1,3 +1,4 @@
+import "./categoryButton.css"
 import  { useState } from "react";
 
 const CategoryButton = ({ options, onCategoryChange }) => {
@@ -15,12 +16,12 @@ const CategoryButton = ({ options, onCategoryChange }) => {
   };
 
   return (
-    <div>
-      <button onClick={toggleMenu}>{btnName}</button>
+    <div className="wrapper-category">
+      <button onClick={toggleMenu} className="btn-category">{btnName}</button>
       {isOpen && (
-        <div className="sort-menu">
+        <div className="category-menu">
           {options.map((option) => (
-            <div
+            <div className="category-option"
               key={option.key}
               onClick={() => handleCategoryChange(option)}
             >

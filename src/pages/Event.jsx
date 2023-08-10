@@ -1,9 +1,9 @@
-
+import React from 'react'
 
 function Event() {
   return (
     <div>
-     <h1>Event</h1> 
+      Event
     </div>
   )
 }
