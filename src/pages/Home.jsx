@@ -5,6 +5,8 @@ import SortButton from '../components/SortButton';
 import CategoryButton from '../components/CategoryButton';
 import EventList from '../components/EventList';
 import '../pages/home.css';
+import SearchIcon from '../images/SearchIcon';
+import AddIcon from '../images/AddIcon';
 
 const Home = () => {
   const [sortBy, setSortBy] = useState('');
@@ -24,18 +26,18 @@ const Home = () => {
     { key: 7, value: 'sport', label: 'Sport' },
   ];
   const dataSortButton = [
-    { key: 1, value: 'by name', label: 'by name ↑' },
-    { key: 2, value: 'by name', label: 'by name ↓ ' },
-    { key: 3, value: 'by data', label: 'by data ↑' },
-    { key: 4, value: 'by data', label: 'by data ↓ ' },
-    { key: 5, value: 'by priority', label: 'by priority ↑' },
-    { key: 6, value: 'by priority', label: 'by priority ↓ ' },
+    { key: 1, value: 'by name', label: 'by name', type: 'up' },
+    { key: 2, value: 'by name', label: 'by name ', type: 'down' },
+    { key: 3, value: 'by data', label: 'by data', type: 'up' },
+    { key: 4, value: 'by data', label: 'by data ', type: 'down' },
+    { key: 5, value: 'by priority', label: 'by priority', type: 'up' },
+    { key: 6, value: 'by priority', label: 'by priority ', type: 'down' },
   ];
   const dataEvents = [
     {
       id: 1,
       title: 'Galery Opening',
-      img: 'https://example.com/gallery-opening.jpg',
+      img: `../../public/images/flowers.jpg`,
       body: 'Discover an enchanting evening celebrating the world of art at our exclusive gallery opening.',
       location: 'Kyiv',
       date: '12.07 at 12:00',
@@ -102,6 +104,16 @@ const Home = () => {
       category: 'film',
       priority: 'low',
     },
+    {
+      id: 8,
+      title: 'Film Screening',
+      img: 'https://example.com/film-screening.jpg',
+      body: 'Experience the magic of cinema with a special screening of critically acclaimed films.',
+      location: 'Los Angeles',
+      date: '10.08 at 20:00',
+      category: 'film',
+      priority: 'low',
+    },
   ];
 
   const handleSortChange = (option) => {
@@ -126,48 +138,49 @@ const Home = () => {
   };
 
   return (
-    <div>
+    <div className='container'>
       <header className="header">
-        <p className="header-logo">Event Planner</p>
-        <div className=" header-nav">
-          <form className="search-form">
-            <svg className="search-icon" width={'24px'} height={'24px'}>
-              <use href="../../public/images/swm-icons-outline-search.svg">
-                df
-              </use>
-            </svg>
-            <input
-              type="text"
-              placeholder="Search by keywords"
-              className="search"
-            />
-          </form>
-          <div className='wrapper-select'>
-            <select className="select">
-              <option value="ua" className="select-one">
-                UK
-              </option>
-              <option value="en" className="select-one">
-                EN
-              </option>
-            </select>
+        <div className='header-wraper'>
+          <p className="header-logo">Event Planner</p>
+          <div className=" header-nav">
+            <form className="search-form">
+              <input
+                type="text"
+                placeholder="Search by keywords"
+                className="search"
+              />
+            </form>
+            <div className="wrapper-select">
+              <select className="select">
+                <option value="ua" className="select-one">
+                  UK
+                </option>
+                <option value="en" className="select-one">
+                  EN
+                </option>
+              </select>
+            </div>
           </div>
         </div>
       </header>
-      <main className='wrapper-main'>
-        <div className='main-nav'>
-        <h1 className='main-title'>My events</h1>
-        <div className='wrapper'>
-          <CategoryButton
-            options={dataCategoryButton}
-            onCategoryChange={handleCategoryChange}
-          />
-          <SortButton 
-            options={dataSortButton}
-            onSortChange={handleSortChange}
-          />
-          <NavLink to="/create" className="nav-link">+ Add new event</NavLink>
-        </div>
+      <main className="wrapper-main">
+        <div className="main-nav">
+          <h1 className="main-title">My events</h1>
+          <div className="wrapper">
+            <CategoryButton
+              options={dataCategoryButton}
+              onCategoryChange={handleCategoryChange}
+            />
+
+            <SortButton
+              options={dataSortButton}
+              onSortChange={handleSortChange}
+            />
+            <NavLink to="/create" className="nav-link">
+              <AddIcon />
+              Add new event
+            </NavLink>
+          </div>
         </div>
         <EventList data={dataEvents} />
       </main>

@@ -1,7 +1,22 @@
+
+.container{
+  margin: 0px auto;
+  height: 100vh;
+  background-image: url('../../public/images/Geo\ Wave\ 22.png');
+  background-repeat: no-repeat;
+  background-position: bottom;
+  background-size: cover;
+}
+
 .header {
   border-bottom: 1px solid #7b61ff;
   background: #fefcff;
   margin: 0 auto;
+  
+}
+.header-wraper{
+  max-width: 1440px;
+  margin: 0px auto;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -26,25 +41,24 @@ line-height: normal; */
 .search-form {
   position: relative;
   margin-right: 36px;
-}
-
-.search {
-  outline: white;
-  border: none;
-  width: 410px;
-  height: 48px;
-  padding: 12px 48px;
   border-radius: 8px;
   background: #fff;
   box-shadow: 2px 4px 9px 0px rgba(166, 141, 174, 0.28);
+  width: 410px;
+  height: 48px;
 }
 
-.search-icon {
-  position: absolute;
-  top: 12px;
-  left: 12px;
-  fill: #7b61ff;
-  border: 1px solid;
+.search {
+  border: none;
+  outline: white;
+  padding: 12px 48px;
+  width: 100%;
+  background-image: url('../images/search.svg');
+  background-repeat: no-repeat;
+  background-position: 12px;
+}
+.search:focus {
+  color: #3f3f3f;
 }
 
 .wrapper-select {
@@ -54,7 +68,6 @@ line-height: normal; */
   outline: white;
   border-radius: 8px;
   background: #fff;
-
   box-shadow: 2px 4px 9px 0px rgba(166, 141, 174, 0.28);
 }
 .select {
@@ -65,28 +78,22 @@ line-height: normal; */
   font-style: normal;
   border: none;
   line-height: 1;
-}
-
-.select-one {
+  outline: white;
 }
 .wrapper-main {
-  border: 1px solid blue;
-  height: 100vh;
-  background-image: url('../../public/images/Geo\ Wave\ 22.png');
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
+  /* border: 1px solid blue; */
+  max-width: 1440px;
+  margin: 0px auto;
+  height: 100%;
   padding: 60px 80px 0 84px;
 }
 .main-nav {
-
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
 .main-title {
-
   color: #3f3f3f;
   font-family: Poppins;
   font-size: 32px;
@@ -95,21 +102,30 @@ line-height: normal; */
   line-height: normal;
 }
 .wrapper {
-  width: 454px;
+  width: 518px;
   height: 56px;
-
   display: flex;
   position: relative;
 }
 .nav-link {
+  display: flex;
+  justify-content: space-around;
   position: absolute;
   width: 193px;
   height: 56px;
   padding: 16px 12px;
-  justify-content: center;
-  align-items: center;
   left: 325px;
   border-radius: 8px;
   background: #7b61ff;
   box-shadow: 2px 4px 9px 0px rgba(166, 141, 174, 0.28);
+  color: #fff;
+  font-family: Poppins;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  text-decoration: none;
+}
+.nav-link:hover {
+  color: #3f3f3f;
 }

@@ -1,3 +1,5 @@
+import ArrowIcon from "../images/ArrowIcon";
+import SortByIcon from "../images/SortByIcon";
 import "./sortButton.css"
 import  { useState } from "react";
 
@@ -14,8 +16,8 @@ const SortButton = ({ options, onSortChange }) => {
   };
 
   return (
-    <div className="wrapper-sort">
-      <button onClick={toggleMenu} className="btn-sort">Sort By</button>
+    <div className={`wrapper-sort ${isOpen ? "active-sort" : ""}`}>
+      <button onClick={toggleMenu} className="btn-sort">Sort By<SortByIcon/></button>
       {isOpen && (
         <div className="sort-menu">
           {options.map((option) => (
@@ -24,6 +26,7 @@ const SortButton = ({ options, onSortChange }) => {
               onClick={() => handleSortChange(option.value)}
             >
               {option.label}
+              <ArrowIcon type={option.type}/>
             </div>
           ))}
         </div>

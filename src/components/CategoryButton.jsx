@@ -1,9 +1,11 @@
-import "./categoryButton.css"
-import  { useState } from "react";
+import './categoryButton.css';
+import { useState } from 'react';
+import FilterIcon from '../images/FilterIcon';
+
 
 const CategoryButton = ({ options, onCategoryChange }) => {
   const [isOpen, setIsOpen] = useState(false);
-  const [btnName, setBtnName] = useState("Category");
+  const [btnName, setBtnName] = useState('Category');
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
@@ -11,17 +13,22 @@ const CategoryButton = ({ options, onCategoryChange }) => {
 
   const handleCategoryChange = (option) => {
     setIsOpen(false);
-    setBtnName(option.label)
+    setBtnName(option.label);
     onCategoryChange(option.value);
   };
 
   return (
-    <div className="wrapper-category">
-      <button onClick={toggleMenu} className="btn-category">{btnName}</button>
+    <div className={`wrapper-category ${isOpen ? "active-category" : ""}`}>
+    
+      <button onClick={toggleMenu} className="btn-category">
+        {btnName}
+        <FilterIcon/>
+      </button>
       {isOpen && (
         <div className="category-menu">
           {options.map((option) => (
-            <div className="category-option"
+            <div
+              className="category-option"
               key={option.key}
               onClick={() => handleCategoryChange(option)}
             >

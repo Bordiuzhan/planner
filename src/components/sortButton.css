@@ -1,6 +1,5 @@
 .wrapper-sort {
   /* border: 1px solid rgb(14, 15, 15); */
-  /* margin-right: 100px; */
   overflow: hidden;
   left: 172px;
   width: 129px;
@@ -9,20 +8,33 @@
   background: #fff;
   box-shadow: 2px 4px 9px 0px rgba(166, 141, 174, 0.28);
 }
+ .active-sort{
+  width:170px;
+  left: 151px;
+}
 .btn-sort {
-  width: 148px;
-  min-height: 56px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: inherit;
+  height: 56px;
+  padding: 16px;
   color: #3f3f3f;
   font-family: Poppins;
   font-size: 16px;
   font-style: normal;
   font-weight: 500;
   line-height: normal;
-  /* border: 1px solid red; */
   border: none;
   background: #fff;
 }
+.btn-sort:hover,
+:focus {
+  color: #7b61ff;
+}
 .sort-option {
+  display: flex;
+
   border-top: 1px solid #aca7c3;
   cursor: pointer;
   color: #aca7c3;
@@ -32,6 +44,8 @@
   font-weight: 400;
   line-height: 1;
   padding: 9px 24px;
+  justify-content: space-between;
+  align-items: center;
 }
 .sort-option:hover,
 :focus {

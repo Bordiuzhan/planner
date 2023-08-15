@@ -1,0 +1,35 @@
+
+.card-list{
+    margin-top: 40px;
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(4, 302px);
+    grid-template-rows: repeat(2, 480px);
+    grid-gap:40px 24px ;
+    list-style: none;
+    padding: 0;
+
+}
+.card-item{
+    overflow: hidden;
+    border: 1px solid #ccc;
+    border-radius: 12px;
+    box-shadow: 2px 4px 9px 0px rgba(166, 141, 174, 0.28);
+}
+.back-img{
+    background-image: url(../../public/images/flowers.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-origin: content-box;
+   
+    width: 302px;
+    height:296px ;
+}
+.mark-height{}
+.mark-category{}
+.mark-priority{}
+.mark-dow{}
+.time{}
+.location{}
+.card-title{}
+.card-body{}
