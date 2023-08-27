@@ -11,9 +11,9 @@ function MyTimePicker() {
   };
 
   return (
-    <div>
-      <input type="time" className='time-picker'  />
-    </div>
+
+      <input type="time"  />
+
   );
 }
 

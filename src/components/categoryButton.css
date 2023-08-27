@@ -1,7 +1,7 @@
 .wrapper-category {
   /* border: 1px solid rgb(14, 15, 15); */
   /* margin-right: 100px; */
- 
+ z-index: 87;
   overflow: hidden;
   width: 148px;
   position: absolute;

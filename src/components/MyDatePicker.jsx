@@ -25,7 +25,6 @@ const MyDatePicker = () => {
 
   return (
     <div>
-      <h2>Date Picker Example</h2>
       <DatePicker
    value={date ? date : 'Select date'}
       open={isClose}
