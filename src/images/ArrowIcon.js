@@ -49,9 +49,9 @@ function ArrowIcon({ type }) {
         <path
           d="M4 12L20 12M4 12L10 6M4 12L10 18"
           stroke={'currentColor'}
-          stroke-width="1.5"
-          stroke-linecap="round"
-          stroke-linejoin="round"
+          strokeWidth="1.5"
+          strokeLinecap="round"
+          strokeLinejoin="round"
         />
       </svg>
     );

@@ -8,18 +8,16 @@ import CategoryButton from '../components/CategoryButton';
 
 import AddIcon from '../images/AddIcon';
 import PaginatedItems from '../components/Pagination';
+import { useSelector } from 'react-redux';
+import { selectEvents, selectVisibleEvents } from '../redux/selectors';
 
-
-
-const Home = ({data}) => {
-  console.log("data", data);
-
+const Home = () => {
   const [sortBy, setSortBy] = useState('');
-  const [visiblePosts, setvisiblePosts] = useState([
-    { name: 'John', age: 25 },
-    { name: 'Alice', age: 30 },
-    { name: 'Bob', age: 20 },
-  ]);
+  const [visiblePosts, setvisiblePosts] = useState([]);
+
+
+  const data = useSelector(selectVisibleEvents);
+
 
   const dataCategoryButton = [
     { key: 1, value: 'art', label: 'Art' },
@@ -82,7 +80,7 @@ const Home = ({data}) => {
           </div>
         </div>
         <div id="container">
-        <PaginatedItems itemsPerPage={8} items={data} />
+          <PaginatedItems itemsPerPage={8} items={data} />
         </div>
       </main>
     </>
