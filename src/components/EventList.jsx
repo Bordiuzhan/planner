@@ -11,7 +11,7 @@ function EventList({ data }) {
               <img src={event.img} alt=" event" className="card-img" />
               <div className="mark-height">
                 <span className="mark-category">{event.category}</span>
-                <span className="mark-priority">High</span>
+                <span className="mark-priority">{event.priority}</span>
               </div>
             </div>
             <div className="card-content">
