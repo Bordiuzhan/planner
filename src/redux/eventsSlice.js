@@ -1,6 +1,7 @@
 import { createSlice } from '@reduxjs/toolkit';
 
-const eventsInitialState ={events: [
+const eventsInitialState = {
+  events: [
     {
       id: 1,
       title: 'Galery Opening',
@@ -151,28 +152,22 @@ const eventsInitialState ={events: [
       category: 'Art',
       priority: 'high',
     },
-  ]};
+  ],
+};
 
 const eventsSlice = createSlice({
   name: 'events',
   initialState: eventsInitialState,
   reducers: {
-    setEventsData:{
-        reducer(state, action){
-            state.push(action.payload)
-        },
-        prepare( text){
-            return{
-                payload:{
-                    text,
-                    id: 1223,
-                    completed: false, 
-                }
-            }
-        }
-    }
-  }});
+    setEventsData: {
+      reducer(state, action) {
+        console.log(action);
+        console.log(state.events);
+        state.events.push(action.payload);
+      },
+    },
+  },
+});
 
 export const { setEventsData } = eventsSlice.actions;
 export const eventsReducer = eventsSlice.reducer;
-

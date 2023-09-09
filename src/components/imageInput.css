@@ -1,0 +1,7 @@
+.input-file {
+  z-index: -1;
+  position: absolute;
+}
+.input-file-custom {
+  color: #3f3f3f;
+}

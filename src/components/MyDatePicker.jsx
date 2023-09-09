@@ -3,48 +3,49 @@ import DatePicker from 'react-datepicker';
 import 'react-datepicker/dist/react-datepicker.css';
 import '../index.css';
 
-const MyDatePicker = () => {
-  const [date, setDate] = useState(null);
-  const [selectedDate, setSelectedDate] = useState(null);
-  const [isClose, setIsClose] = useState(false);
+const MyDatePicker = ({ initialValue, onChange }) => {
+  const [selectedDate, setSelectedDate] = useState(null );
+  const [isOpen, setIsOpen] = useState(false);
 
-  console.log("date",date);
-  console.log("selectedDate",selectedDate);
-
-  const handleSetDate = (date) => {
-    setDate(selectedDate)
-    setIsClose(false);
-  };
-  const handleFocus = () => {
-    setIsClose(true);
+  const handleSetDate = () => {
+    setIsOpen(false);
+    onChange(selectedDate); 
   };
 
-  const handleBlur = () => {
-    console.log(selectedDate);
+  const toggleDatePicker = () => {
+    setIsOpen(!isOpen);
   };
 
   return (
-    <div>
-      <DatePicker
-   value={date ? date : 'Select date'}
-      open={isClose}
-        selected={selectedDate}
-        onChange={(date) => setSelectedDate(date)}
-        onFocus={handleFocus}
-        // onBlur={handleBlur}
-        shouldCloseOnSelect={false}
-        // inline={isClose}
-        
-      >
-        <button className="cancel-button" onClick={() => {setIsClose(false); setDate(null)}}>
-          Cancel
-        </button>
-        <button className="set-button" onClick={handleSetDate}>
-          Set Date
-        </button>
-      </DatePicker>
+    <div className="my-date-picker">
+      <input
+        type="text"
+        className="date-input"
+        value={selectedDate ? selectedDate : 'Select date' }
+        onClick={toggleDatePicker}
+        readOnly
+      />
+      {isOpen && (
+        <div className="date-picker-container">
+          <DatePicker
+            selected={selectedDate}
+            onChange={(date) => setSelectedDate(date)}
+            shouldCloseOnSelect={false}
+            inline
+          />
+          <div className="button-container">
+            <button className="cancel-button" onClick={toggleDatePicker}>
+              Cancel
+            </button>
+            <button className="set-button" onClick={handleSetDate}>
+              Set Date
+            </button>
+          </div>
+        </div>
+      )}
     </div>
   );
 };
 
 export default MyDatePicker;
+

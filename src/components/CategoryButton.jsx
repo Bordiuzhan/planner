@@ -3,8 +3,6 @@ import { useRef, useState } from 'react';
 import FilterIcon from '../images/FilterIcon';
 import { useClickAway } from 'react-use';
 
-
-
 const CategoryButton = ({ onCategoryChange }) => {
   const [isOpen, setIsOpen] = useState(false);
   const [btnName, setBtnName] = useState('Category');
@@ -37,11 +35,10 @@ const CategoryButton = ({ onCategoryChange }) => {
   });
 
   return (
-    <div className={`wrapper-category ${isOpen ? "active-category" : ""}`}>
-    
+    <div className={`wrapper-category ${isOpen ? 'active-category' : ''}`}>
       <button onClick={toggleMenu} className="btn-category">
         {btnName}
-        <FilterIcon/>
+        <FilterIcon />
       </button>
       {isOpen && (
         <div className="category-menu" ref={menuRef}>
