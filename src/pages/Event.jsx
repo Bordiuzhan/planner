@@ -21,7 +21,7 @@ function Event() {
           <p className="event-text">{event.body} </p>
           <div className="event-chips-wrapper">
             <p className="event-chip">{event.category}</p>
-            <p className="event-chip">{event.priority}</p>
+            <p className={`event-chip priority-${event.priority}`}>{event.priority}</p>
             <p className="event-chip">{event.location}</p>
             <p className="event-chip">{event.date}</p>
           </div>

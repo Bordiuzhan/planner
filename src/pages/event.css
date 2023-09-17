@@ -1,7 +1,7 @@
 .event-container {
   max-width: 1440px;
   margin: 0px auto;
-  height: 100%;
+  height: 100vh;
   padding: 20px 80px 0 84px;
 }
 .event-content-wrapper {
@@ -50,6 +50,15 @@
 }
 .event-chip:first-child {
   margin-left: 10px;
+}
+.priority-low {
+  color: #6BD475; 
+}
+.priority-medium {
+  color: #E2A300; 
+}
+.priority-high {
+  color: #FF2B77;
 }
 .event-buttons-wrapper {
   display: flex;
