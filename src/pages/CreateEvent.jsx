@@ -1,6 +1,6 @@
 import '../pages/createEvent.css';
 
-import { useLocation } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
 import { useState } from 'react';
 import { nanoid } from 'nanoid';
 import ArrowBack from '../components/ArrowBack';
@@ -28,6 +28,7 @@ function CreateEvent() {
   const [priority, setPriority] = useState('');
   const [formDataImg, setFormDataImg] = useState(null);
 
+ const navigate = useNavigate();
   const dispatch = useDispatch();
 
   const handleSubmit = async (e) => {
@@ -58,7 +59,7 @@ function CreateEvent() {
           priority: priority,
         };
         dispatch(setEventsData(newEvent))
-        console.log('newEvent', newEvent);
+        navigate("/")
       } else {
         const newEvent = {
           id: nanoid(),
@@ -70,6 +71,8 @@ function CreateEvent() {
           category: category,
           priority: priority,
         };
+        dispatch(setEventsData(newEvent))
+        navigate("/")
       }
     } catch (error) {
       console.error('Error uploading image:', error);

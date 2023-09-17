@@ -161,8 +161,6 @@ const eventsSlice = createSlice({
   reducers: {
     setEventsData: {
       reducer(state, action) {
-        console.log(action);
-        console.log(state.events);
         state.events.push(action.payload);
       },
     },

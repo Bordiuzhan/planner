@@ -2,6 +2,8 @@ import { Link } from 'react-router-dom';
 import './eventList.css';
 
 function EventList({ data }) {
+
+
   return (
     <div>
       <ul className="card-list">
@@ -11,7 +13,7 @@ function EventList({ data }) {
               <img src={event.img} alt=" event" className="card-img" />
               <div className="mark-height">
                 <span className="mark-category">{event.category}</span>
-                <span className="mark-priority">{event.priority}</span>
+                <span className={`mark-priority priority-${event.priority}`}>{event.priority}</span>
               </div>
             </div>
             <div className="card-content">

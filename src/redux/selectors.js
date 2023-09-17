@@ -13,6 +13,6 @@ export const selectVisibleEvents = createSelector(
     }
     return events.filter(events =>
       events.title.toLowerCase().includes(normalizedFilter)
-    );
+    ).reverse();
   }
 );

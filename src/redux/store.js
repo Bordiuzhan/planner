@@ -16,7 +16,6 @@ import { filterReducer } from './filterslice';
 const eventsPersistConfig = {
   key: 'events',
   storage,
-  whitelist: ['token'],
 };
 
 export const store = configureStore({
@@ -31,5 +30,7 @@ export const store = configureStore({
       },
     }),
 });
+
+
 
 export const persistor = persistStore(store);
