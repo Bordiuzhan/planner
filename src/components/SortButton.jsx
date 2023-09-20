@@ -1,9 +1,8 @@
-import "./sortButton.css"
+import "./SortButton.css"
 import  { useRef, useState } from "react";
 import ArrowIcon from "../images/ArrowIcon";
 import SortByIcon from "../images/SortByIcon";
 import { useClickAway } from 'react-use';
-
 
 const SortButton = ({ options, onSortChange }) => {
   const [isOpen, setIsOpen] = useState(false);

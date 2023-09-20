@@ -1,6 +1,6 @@
 import React from 'react';
 import ArrowBack from '../components/ArrowBack';
-import '../pages/event.css';
+import '../pages/Event.css';
 import { useParams } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 import { selectVisibleEvents } from '../redux/selectors';
@@ -10,6 +10,7 @@ function Event() {
 
   const { eventId } = useParams();
   const event = data.find((event) => event.id.toString() === eventId);
+  const deleteEvent=
   return (
     <div className="event-container">
       <ArrowBack />
@@ -26,8 +27,8 @@ function Event() {
             <p className="event-chip">{event.date}</p>
           </div>
           <div className="event-buttons-wrapper">
-            <button className="event-button-edit">Edit</button>
-            <button className="event-button-delete">Delete event</button>
+            <button type='button' className="event-button-edit">Edit</button>
+            <button type='button' className="event-button-delete" onClick={deleteEvent}>Delete event</button>
           </div>
         </div>
       </div>

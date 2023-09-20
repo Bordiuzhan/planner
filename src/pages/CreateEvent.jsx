@@ -1,6 +1,6 @@
-import '../pages/createEvent.css';
+import '../pages/CreateEvent.css';
 
-import { useLocation, useNavigate } from 'react-router-dom';
+import {  useNavigate } from 'react-router-dom';
 import { useState } from 'react';
 import { nanoid } from 'nanoid';
 import ArrowBack from '../components/ArrowBack';

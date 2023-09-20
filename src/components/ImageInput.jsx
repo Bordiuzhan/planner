@@ -1,5 +1,5 @@
 import { useRef, useState } from 'react';
-import './imageInput.css';
+import './ImageInput.css';
 
 const ImageInput = ({ addImgData }) => {
   const [fileName, setFileName] = useState('file');

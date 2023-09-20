@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import './eventList.css';
+import './EventList.css';
 
 function EventList({ data }) {
 
