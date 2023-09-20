@@ -164,8 +164,13 @@ const eventsSlice = createSlice({
         state.events.push(action.payload);
       },
     },
+    deleteEvent:{
+      reducer(state,action){
+        state.events=state.events.filter((event)=>event.id!==action.payload)
+      }
+    }
   },
 });
 
-export const { setEventsData } = eventsSlice.actions;
+export const { setEventsData,deleteEvent } = eventsSlice.actions;
 export const eventsReducer = eventsSlice.reducer;

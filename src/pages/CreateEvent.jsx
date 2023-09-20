@@ -1,12 +1,12 @@
 import '../pages/CreateEvent.css';
 
-import {  useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import { useState } from 'react';
+import { useDispatch } from 'react-redux';
 import { nanoid } from 'nanoid';
 import ArrowBack from '../components/ArrowBack';
 import CustomSelect from '../components/CustomSelect';
 import ImageInput from '../components/ImageInput';
-import { useDispatch } from 'react-redux';
 import { setEventsData } from '../redux/eventsSlice';
 
 function CreateEvent() {
@@ -28,7 +28,7 @@ function CreateEvent() {
   const [priority, setPriority] = useState('');
   const [formDataImg, setFormDataImg] = useState(null);
 
- const navigate = useNavigate();
+  const navigate = useNavigate();
   const dispatch = useDispatch();
 
   const handleSubmit = async (e) => {
@@ -58,25 +58,25 @@ function CreateEvent() {
           category: category,
           priority: priority,
         };
-        dispatch(setEventsData(newEvent))
-        navigate("/")
+        dispatch(setEventsData(newEvent));
+        navigate('/');
       } else {
         const newEvent = {
           id: nanoid(),
           title: formData.get('title'),
-          img: "https://res.cloudinary.com/dw8vkzfdu/image/upload/v1692292541/flowers_m9dc55.jpg",
+          img: 'https://res.cloudinary.com/dw8vkzfdu/image/upload/v1692292541/flowers_m9dc55.jpg',
           body: formData.get('body'),
           location: formData.get('location'),
           date: formData.get('date') + formData.get('time'),
           category: category,
           priority: priority,
         };
-        dispatch(setEventsData(newEvent))
-        navigate("/")
+        dispatch(setEventsData(newEvent));
+        navigate('/');
       }
     } catch (error) {
       console.error('Error uploading image:', error);
-    } 
+    }
   };
 
   const handleSelectChangeCategory = (newOption) => {
