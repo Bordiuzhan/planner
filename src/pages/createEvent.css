@@ -1,7 +1,7 @@
 .add_event-container {
   max-width: 1440px;
   margin: 0px auto;
-  height: 100%;
+  height: 100vh;
   padding: 20px 80px 0 84px;
 }
 .link_back {
@@ -41,7 +41,6 @@ line-height: normal; */
   justify-content: space-between;
 }
 .input-column {
-
   display: flex;
   flex-direction: column;
   gap: 20px;
@@ -57,7 +56,8 @@ line-height: normal; */
   line-height: 16px;
   letter-spacing: 0.4px;
 }
-.input-column input,textarea {
+.input-column input,
+textarea {
   display: flex;
   min-width: 372px;
   padding: 16px 12px;
@@ -65,12 +65,16 @@ line-height: normal; */
   align-items: center;
   border-radius: 8px;
   border: 1px solid var(--divider, #aca7c3);
-  text-transform: capitalize;
   color: #3f3f3f;
   resize: none;
 }
-textarea {height: 155px;}
-.input-column input{
+#myInput::first-letter {
+  text-transform: uppercase;
+}
+textarea {
+  height: 155px;
+}
+.input-column input {
   height: 55px;
 }
 .input-column label p {

@@ -95,7 +95,7 @@ function CreateEvent() {
           <div className="input-column">
             <label>
               <p>Title</p>
-              <input type="text" name="title" />
+              <input type="text" id="myInput" name="title" />
             </label>
             <label>
               <p>Description</p>
@@ -103,6 +103,7 @@ function CreateEvent() {
                 name="body"
                 rows={6}
                 placeholder="Enter your text here..."
+                id="myInput"
               />
             </label>
           </div>
@@ -119,7 +120,7 @@ function CreateEvent() {
             </label>
             <label>
               <p>Location</p>
-              <input name="location"></input>
+              <input name="location" id="myInput"></input>
             </label>
           </div>
           <div className="input-column">

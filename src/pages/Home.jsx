@@ -1,6 +1,6 @@
 import '../pages/Home.css';
 
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { NavLink } from 'react-router-dom';
 
 import SortButton from '../components/SortButton';
@@ -12,12 +12,14 @@ import { useSelector } from 'react-redux';
 import { selectVisibleEvents } from '../redux/selectors';
 
 const Home = () => {
-  const [sortBy, setSortBy] = useState('');
-  const [initialPosts] = useState(useSelector(selectVisibleEvents || []));
+  const initialPosts= useSelector(selectVisibleEvents || []);
   const [visiblePosts, setVisiblePosts] = useState(initialPosts);
 
+  useEffect(()=>{
+    setVisiblePosts(initialPosts);
+  },[initialPosts])
+
   const handleSortChange = (option) => {
-    setSortBy(option);
     let sortedData = [...visiblePosts];
 
     if (option.value === 'by name') {
@@ -56,7 +58,6 @@ const Home = () => {
   };
 
   const handleCategoryChange = (option) => {
-    setSortBy(option);
     const sortedData = [...initialPosts];
     let data;
     switch (option) {

@@ -6,14 +6,13 @@ import { setFilterData } from '../redux/filterslice';
 
 const Layout = () => {
   const [selectedLanguage, setSelectedLanguage] = useState('ua');
+
   const dispatch = useDispatch();
   const searchKeyword = useSelector(selectFilter);
 
-  const handleSearchChange = e => {
+  const handleSearchChange = (e) => {
     dispatch(setFilterData(e.currentTarget.value));
   };
-
-  
 
   const handleLanguageChange = (event) => {
     setSelectedLanguage(event.target.value);
@@ -53,9 +52,8 @@ const Layout = () => {
           </div>
         </div>
       </header>
-
       <Suspense fallback={<div>Loading...</div>}>
-        <Outlet />
+        <Outlet  />
       </Suspense>
     </div>
   );
