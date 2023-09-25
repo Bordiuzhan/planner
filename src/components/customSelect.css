@@ -3,19 +3,19 @@
 }
 .select-options {
   position: absolute;
-  top: 97px;
+  top: 6.0625rem;
   z-index: 10;
-  width: 372px;
-  padding: 0px 16px;
+  width: 23.25rem;
+  padding: 0rem 1rem;
   border-radius: 8px;
   background: #fff;
   box-shadow: 2px 4px 9px 0px rgba(166, 141, 174, 0.28);
 }
 .select-option{
-    padding: 16px 0;
+    padding: 1rem 0;
     color:  #3F3F3F;
 font-family: Poppins;
-font-size: 16px;
+font-size: 1rem;
 font-style: normal;
 font-weight: 400;
 line-height: normal;
@@ -29,8 +29,8 @@ input {
 }
 .container-svg {
   position: absolute;
-  right: 16px;
-  top: 40px;
+  right: 1rem;
+  top: 2.5rem;
 }
 .hidden {
   display: none;

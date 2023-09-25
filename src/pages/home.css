@@ -1,6 +1,6 @@
 
 .container{
-  margin: 0px auto;
+  margin: 0rem auto;
   background-image: url('../../public/images/Geo\ Wave\ 22.png');
   background-repeat: no-repeat;
   background-position: bottom;
@@ -15,19 +15,19 @@
   
 }
 .header-wraper{
-  max-width: 1440px;
-  margin: 0px auto;
+  max-width: 90rem;
+  margin: 0rem auto;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 92px;
-  padding: 0 87px;
+  height: 5.75rem;
+  padding: 0 5.4375rem;
 }
 
 .header-logo {
   color: #7b61ff;
   font-family: Alata;
-  font-size: 24px;
+  font-size: 1.5rem;
   /* font-style: normal;
 font-weight: 400;
 line-height: normal; */
@@ -40,38 +40,38 @@ line-height: normal; */
 
 .search-form {
   position: relative;
-  margin-right: 36px;
-  border-radius: 8px;
+  margin-right: 2.25rem;
+  border-radius: 0.5rem;
   background: #fff;
   box-shadow: 2px 4px 9px 0px rgba(166, 141, 174, 0.28);
-  width: 410px;
-  height: 48px;
+  width: 25.625rem;
+  height: 3rem;
 }
 
 .search {
   border: none;
   outline: white;
-  padding: 12px 48px;
+  padding: 0.75rem 3rem;
   width: 100%;
   background-image: url('../images/search.svg');
   background-repeat: no-repeat;
-  background-position: 12px;
+  background-position: 0.75rem;
 }
 .search:focus {
   color: #3f3f3f;
 }
 
 .wrapper-select {
-  width: 69px;
-  padding: 12px 4px 12px 12px;
+  width: 4.3125rem;
+  padding: 0.75rem 0.25rem 0.75rem 0.75rem;
   align-items: center;
   outline: white;
-  border-radius: 8px;
+  border-radius: 0.5rem;
   background: #fff;
   box-shadow: 2px 4px 9px 0px rgba(166, 141, 174, 0.28);
 }
 .select {
-  width: 48px;
+  width: 3rem;
   font-family: Poppins;
   color: #3f3f3f;
   font-size: 16px;
@@ -82,10 +82,10 @@ line-height: normal; */
 }
 .wrapper-main {
   /* border: 1px solid blue; */
-  max-width: 1440px;
-  margin: 0px auto;
+  max-width: 90rem;
+  margin: 0rem auto;
   height: 100%;
-  padding: 60px 80px 0 84px;
+  padding: 3.75rem 5rem 0 5.25rem;
 }
 .main-nav {
   display: flex;
@@ -96,14 +96,14 @@ line-height: normal; */
 .main-title {
   color: #3f3f3f;
   font-family: Poppins;
-  font-size: 32px;
+  font-size: 2rem;
   font-style: normal;
   font-weight: 600;
   line-height: normal;
 }
 .wrapper {
-  width: 518px;
-  height: 56px;
+  width: 32.375rem;
+  height: 3.5rem;
   display: flex;
   position: relative;
 }
@@ -111,16 +111,16 @@ line-height: normal; */
   display: flex;
   justify-content: space-around;
   position: absolute;
-  width: 193px;
-  height: 56px;
-  padding: 16px 12px;
-  left: 325px;
-  border-radius: 8px;
+  width: 12.0625rem;
+  height: 3.5rem;
+  padding: 1rem 0.75rem;
+  left: 20.3125rem;
+  border-radius: 0.5rem;
   background: #7b61ff;
   box-shadow: 2px 4px 9px 0px rgba(166, 141, 174, 0.28);
   color: #fff;
   font-family: Poppins;
-  font-size: 16px;
+  font-size: 1rem;
   font-style: normal;
   font-weight: 500;
   line-height: normal;

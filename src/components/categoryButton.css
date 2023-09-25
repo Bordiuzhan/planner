@@ -1,28 +1,27 @@
 .wrapper-category {
-  /* border: 1px solid rgb(14, 15, 15); */
-  /* margin-right: 100px; */
+
  z-index: 87;
   overflow: hidden;
-  width: 148px;
+  width: 9.25rem;
   position: absolute;
-  border-radius: 8px;
+  border-radius: 0.5rem;
   background: #fff;
   box-shadow: 2px 4px 9px 0px rgba(166, 141, 174, 0.28);
 }
 .active-category{
-  width:158px;
-  left: 5px;
+  width:9.875rem;
+  left: 0.3125rem;
 }
 .btn-category {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 16px;
+  padding: 1rem;
   width: inherit;
-  height: 56px;
+  height: 3.5rem;
   color: #3f3f3f;
   font-family: Poppins;
-  font-size: 16px;
+  font-size: 1rem;
   font-weight: 500;
   line-height: normal;
   border: none;
@@ -37,11 +36,11 @@
   cursor: pointer;
   color: #aca7c3;
   font-family: Poppins;
-  font-size: 14px;
+  font-size: 0.875rem;
   font-style: normal;
   font-weight: 400;
   line-height: 1;
-  padding: 9px 24px;
+  padding: 0.5625rem 1.5rem;
 }
 .category-option:hover,
 :focus {

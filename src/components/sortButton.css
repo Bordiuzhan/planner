@@ -1,28 +1,27 @@
 .wrapper-sort {
   z-index: 88;
-  /* border: 1px solid rgb(14, 15, 15); */
   overflow: hidden;
-  left: 172px;
-  width: 129px;
+  left: 10.75rem;
+  width: 8.0625rem;
   position: absolute;
-  border-radius: 8px;
+  border-radius: 0.5rem;
   background: #fff;
   box-shadow: 2px 4px 9px 0px rgba(166, 141, 174, 0.28);
 }
  .active-sort{
-  width:170px;
-  left: 151px;
+  width:10.625rem;
+  left: 9.4375rem;
 }
 .btn-sort {
   display: flex;
   justify-content: space-between;
   align-items: center;
   width: inherit;
-  height: 56px;
-  padding: 16px;
+  height: 3.5rem;
+  padding: 1rem;
   color: #3f3f3f;
   font-family: Poppins;
-  font-size: 16px;
+  font-size: 1rem;
   font-style: normal;
   font-weight: 500;
   line-height: normal;
@@ -40,11 +39,11 @@
   cursor: pointer;
   color: #aca7c3;
   font-family: Poppins;
-  font-size: 14px;
+  font-size: 0.875rem;
   font-style: normal;
   font-weight: 400;
   line-height: 1;
-  padding: 9px 24px;
+  padding: 0.5625rem 1.5rem;
   justify-content: space-between;
   align-items: center;
 }

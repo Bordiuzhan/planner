@@ -5,7 +5,7 @@ function EventList({ data }) {
 
 
   return (
-    <div>
+    <div className='card-list-wrapper'>
       <ul className="card-list">
         {data.map((event) => (
           <li key={event.id} className="card-item">
