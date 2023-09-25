@@ -1,4 +1,4 @@
-import '../pages/Event.css';
+import '../pages/event.css';
 import ArrowBack from '../components/ArrowBack';
 import { useNavigate, useParams } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
