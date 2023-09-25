@@ -1,4 +1,4 @@
-import '../pages/Home.css';
+import '../Home.css';
 
 import { useEffect, useState } from 'react';
 import { NavLink } from 'react-router-dom';
