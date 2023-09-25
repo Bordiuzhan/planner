@@ -1,4 +1,4 @@
-import  './CategoryButton.css';
+import  './categoryButton.css';
 import { useRef, useState } from 'react';
 import FilterIcon from '../images/FilterIcon';
 import { useClickAway } from 'react-use';

@@ -1,4 +1,4 @@
-import "./SortButton.css"
+import "./sortButton.css"
 import  { useRef, useState } from "react";
 import ArrowIcon from "../images/ArrowIcon";
 import SortByIcon from "../images/SortByIcon";

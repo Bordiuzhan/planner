@@ -1,4 +1,4 @@
-import '../pages/CreateEvent.css';
+import '../pages/createEvent.css';
 
 import { useNavigate } from 'react-router-dom';
 import { useState } from 'react';

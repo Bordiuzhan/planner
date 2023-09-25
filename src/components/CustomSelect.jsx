@@ -1,5 +1,5 @@
 import React, { useRef, useState } from 'react';
-import './CustomSelect.css';
+import './customSelect.css';
 import AngleBracket from '../images/AngleBracket';
 import { useClickAway } from 'react-use';
 

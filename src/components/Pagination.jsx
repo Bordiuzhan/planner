@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import ReactPaginate from 'react-paginate';
 import EventList from './EventList';
-import './Pagination.css';
+import './pagination.css';
 import previous from '../images/previous.svg';
 import next from '../images/next.svg';
 
