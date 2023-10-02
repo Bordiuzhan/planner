@@ -1,6 +1,7 @@
-.input-file {
+.input-file  {
   z-index: -1;
   position: absolute;
+ width: 2px;
 }
 .input-file-custom {
   color: #3f3f3f;

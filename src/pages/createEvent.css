@@ -40,9 +40,16 @@ line-height: normal; */
   display: flex;
   justify-content: space-between;
 }
+@media (max-width: 1439px) {
+  .add_event-wrapper {
+    flex-direction: column;
+  }
+}
+
 .input-column {
   display: flex;
   flex-direction: column;
+  min-width: 372px;
   gap: 20px;
 }
 .input-column label {
@@ -57,9 +64,9 @@ line-height: normal; */
   letter-spacing: 0.025rem;
 }
 .input-column input,
-textarea {
+textarea  {
   display: flex;
-  min-width: 23.25rem;
+width: 100%;
   padding: 1rem 0.75rem;
   justify-content: space-between;
   align-items: center;
@@ -68,6 +75,8 @@ textarea {
   color: #3f3f3f;
   resize: none;
 }
+
+
 #myInput::first-letter {
   text-transform: uppercase;
 }

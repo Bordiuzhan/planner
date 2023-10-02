@@ -1,5 +1,4 @@
 .wrapper-category {
-
  z-index: 87;
   overflow: hidden;
   width: 9.25rem;
@@ -8,16 +7,28 @@
   background: #fff;
   box-shadow: 2px 4px 9px 0px rgba(166, 141, 174, 0.28);
 }
+@media (max-width: 768px) {
+  .wrapper-category  {
+width: 3.5rem;
+left: 64px;
+  }
+}
 .active-category{
   width:9.875rem;
   left: 0.3125rem;
+}  
+@media (max-width: 768px) {
+  .active-category  {
+    left: 2.3125rem;
+    z-index: 200;
+  }
 }
 .btn-category {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 1rem;
-  width: inherit;
+  width: 148px;
   height: 3.5rem;
   color: #3f3f3f;
   font-family: Poppins;
@@ -26,6 +37,11 @@
   line-height: normal;
   border: none;
   background: #fff;
+}
+@media (max-width: 768px) {
+  .btn-category {
+    flex-direction: row-reverse;
+  }
 }
 .btn-category:hover,
 :focus {

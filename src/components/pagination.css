@@ -11,11 +11,17 @@
   gap: 1.25rem;
   padding: 0.625rem;
   list-style: none;
-  margin-left: auto;
   border-radius: 0.5rem;
   background: #fff;
   box-shadow: 2px 4px 9px 0px rgba(166, 141, 174, 0.28);
   justify-content: flex-end;
+}
+@media (max-width: 1439px) {
+  .pagination {
+   margin: auto;
+   margin-bottom: 7.8125rem;
+   margin-top: 2.5rem;
+  }
 }
 .pagination-previous {
   padding: 1.25rem;

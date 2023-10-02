@@ -8,15 +8,27 @@
   background: #fff;
   box-shadow: 2px 4px 9px 0px rgba(166, 141, 174, 0.28);
 }
+@media (max-width: 768px) {
+  .wrapper-sort  {
+width: 3.5rem;
+left: 8.75rem;
+  }
+}
  .active-sort{
   width:10.625rem;
   left: 9.4375rem;
+}
+@media (max-width: 768px) {
+  .active-sort  {
+    left: 2.4375rem;
+
+  }
 }
 .btn-sort {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: inherit;
+  width: 8.0625rem;
   height: 3.5rem;
   padding: 1rem;
   color: #3f3f3f;
@@ -28,13 +40,17 @@
   border: none;
   background: #fff;
 }
+@media (max-width: 768px) {
+  .btn-sort {
+    flex-direction: row-reverse;
+  }
+}
 .btn-sort:hover,
 :focus {
   color: #7b61ff;
 }
 .sort-option {
   display: flex;
-
   border-top: 1px solid #aca7c3;
   cursor: pointer;
   color: #aca7c3;

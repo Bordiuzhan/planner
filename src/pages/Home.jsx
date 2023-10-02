@@ -100,7 +100,7 @@ const Home = () => {
             <SortButton onSortChange={handleSortChange} />
             <NavLink to="/create" className="nav-link">
               <AddIcon />
-              Add new event
+            <span>  Add new event</span>
             </NavLink>
           </div>
         </div>
